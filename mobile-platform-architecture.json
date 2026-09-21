@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Mobile Platform Architecture",
+    "output": "mobile-platform-architecture.html",
+    "quality_profile": "showcase",
+    "views": [
+      {
+        "id": "request-path",
+        "label": "Mobile request path",
+        "focus": ["mobile", "keycloak", "api", "postgres", "mongodb"],
+        "note": "Trace authentication and authenticated API requests from the mobile client to durable data."
+      },
+      {
+        "id": "maps",
+        "label": "Maps integration",
+        "focus": ["mobile", "maps", "api"],
+        "note": "Map tiles and location interactions cross to the external maps service."
+      },
+      {
+        "id": "development",
+        "label": "Development workflow",
+        "focus": ["source-control", "docker"],
+        "note": "Git/GitHub supplies source changes to the Docker Compose local stack."
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "mobile",
+      "type": "frontend",
+      "label": "Flutter Mobile App",
+      "sublabel": "iOS / Android client",
+      "pos": [70, 330],
+      "size": [180, 72],
+      "tag": "Public client"
+    },
+    {
+      "id": "keycloak",
+      "type": "security",
+      "label": "Keycloak",
+      "sublabel": "OIDC / OAuth 2.0",
+      "pos": [350, 145],
+      "size": [170, 72],
+      "tag": "Identity provider"
+    },
+    {
+      "id": "api",
+      "type": "backend",
+      "label": "FastAPI REST API",
+      "sublabel": "HTTPS REST endpoints",
+      "pos": [600, 330],
+      "size": [180, 72],
+      "brand": "fastapi"
+    },
+    {
+      "id": "postgres",
+      "type": "database",
+      "label": "PostgreSQL",
+      "sublabel": "relational data",
+      "pos": [950, 245],
+      "size": [170, 72],
+      "brand": "postgresql"
+    },
+    {
+      "id": "mongodb",
+      "type": "database",
+      "label": "MongoDB",
+      "sublabel": "document data",
+      "pos": [950, 420],
+      "size": [170, 72],
+      "brand": "mongodb"
+    },
+    {
+      "id": "maps",
+      "type": "external",
+      "label": "Leaflet / Maps Service",
+      "sublabel": "map tiles and geospatial services",
+      "pos": [340, 515],
+      "size": [205, 72],
+      "tag": "External service"
+    },
+    {
+      "id": "docker",
+      "type": "cloud",
+      "label": "Docker Development Environment",
+      "sublabel": "Docker + Docker Compose",
+      "pos": [600, 650],
+      "size": [225, 72],
+      "brand": "docker",
+      "tag": "Local stack"
+    },
+    {
+      "id": "source-control",
+      "type": "external",
+      "label": "Git + GitHub",
+      "sublabel": "source control and collaboration",
+      "pos": [980, 650],
+      "size": [190, 72],
+      "brand": "github"
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "security-group",
+      "label": "Public client trust boundary",
+      "wraps": ["mobile"],
+      "pad": 28
+    },
+    {
+      "kind": "security-group",
+      "label": "Trusted application and data boundary",
+      "wraps": ["keycloak", "api", "postgres", "mongodb"],
+      "pad": 42
+    },
+    {
+      "kind": "region",
+      "label": "Local development boundary",
+      "wraps": ["docker"],
+      "pad": 28
+    }
+  ],
+  "connections": [
+    {
+      "id": "mobile-auth",
+      "from": "mobile",
+      "to": "keycloak",
+      "label": "OIDC sign-in / tokens",
+      "variant": "security"
+    },
+    {
+      "id": "mobile-api",
+      "from": "mobile",
+      "to": "api",
+      "label": "HTTPS REST + bearer token",
+      "variant": "emphasis"
+    },
+    {
+      "id": "api-keycloak",
+      "from": "api",
+      "to": "keycloak",
+      "label": "JWKS / token validation",
+      "variant": "security"
+    },
+    {
+      "id": "api-postgres",
+      "from": "api",
+      "to": "postgres",
+      "label": "SQL read / write"
+    },
+    {
+      "id": "api-mongodb",
+      "from": "api",
+      "to": "mongodb",
+      "label": "document read / write"
+    },
+    {
+      "id": "mobile-maps",
+      "from": "mobile",
+      "to": "maps",
+      "label": "map rendering / tiles",
+      "variant": "dashed"
+    },
+    {
+      "id": "api-maps",
+      "from": "api",
+      "to": "maps",
+      "label": "geospatial requests",
+      "variant": "dashed"
+    },
+    {
+      "id": "source-docker",
+      "from": "source-control",
+      "to": "docker",
+      "label": "clone / pull source",
+      "variant": "dashed"
+    },
+    {
+      "id": "docker-api",
+      "from": "docker",
+      "to": "api",
+      "label": "orchestrates local API + data services",
+      "variant": "dashed",
+      "fromSide": "top",
+      "toSide": "bottom"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Primary request flow",
+      "items": ["Flutter authenticates with Keycloak", "The mobile app calls FastAPI over HTTPS with a bearer token", "FastAPI persists relational and document data"]
+    },
+    {
+      "dot": "amber",
+      "title": "Trust boundaries",
+      "items": ["The mobile app is a public client", "Application services and databases are grouped in the trusted boundary", "Maps and source control are external integrations"]
+    },
+    {
+      "dot": "violet",
+      "title": "Developer workflow",
+      "items": ["Git and GitHub manage source and collaboration", "Docker Compose runs the local development stack"]
+    }
+  ]
+}
