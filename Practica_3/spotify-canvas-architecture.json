@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Arquitectura de Canvas Spotify",
+    "quality_profile": "showcase",
+    "viewBox": [1280, 720]
+  },
+  "components": [
+    { "id": "persona", "type": "external", "label": "Persona usuaria", "sublabel": "Navegador web", "pos": [45, 270], "size": [155, 68] },
+    { "id": "header", "type": "frontend", "label": "Encabezado y controles", "sublabel": "Búsqueda, filtro, vistas", "pos": [275, 85], "size": [195, 70] },
+    { "id": "canvas", "type": "frontend", "label": "Canvas interactivo", "sublabel": "9 tarjetas expandibles", "pos": [275, 270], "size": [195, 76] },
+    { "id": "explorer", "type": "frontend", "label": "Modo exploración", "sublabel": "Progreso y navegación", "pos": [275, 455], "size": [195, 70] },
+    { "id": "controller", "type": "backend", "label": "Lógica de interacción", "sublabel": "Estado, filtro y navegación", "pos": [590, 270], "size": [210, 76] },
+    { "id": "data", "type": "database", "label": "Datos del Canvas", "sublabel": "9 bloques y análisis", "pos": [910, 270], "size": [195, 70] },
+    { "id": "styles", "type": "cloud", "label": "Sistema visual", "sublabel": "CSS responsive oscuro", "pos": [590, 455], "size": [210, 70] }
+  ],
+  "connections": [
+    { "from": "persona", "to": "canvas", "label": "interactúa", "variant": "emphasis" },
+    { "from": "header", "to": "canvas", "label": "cambia la vista", "fromSide": "bottom", "toSide": "top", "labelDy": 24 },
+    { "from": "canvas", "to": "controller", "label": "eventos" },
+    { "from": "explorer", "to": "controller", "label": "navegación", "fromSide": "right", "toSide": "bottom" },
+    { "from": "controller", "to": "data", "label": "consulta" }
+  ],
+  "cards": [
+    { "dot": "emerald", "title": "Interfaz", "items": ["Vista Canvas y modo exploración", "Búsqueda, filtros y tarjetas accesibles"] },
+    { "dot": "cyan", "title": "Contenido", "items": ["Datos locales y modulares", "Cada bloque se identifica como análisis"] },
+    { "dot": "violet", "title": "Escalabilidad", "items": ["Nueva empresa: añadir un conjunto de datos", "Sin backend para la experiencia básica"] }
+  ]
+}
