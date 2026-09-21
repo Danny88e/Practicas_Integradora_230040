@@ -22,6 +22,7 @@ Este repositorio contiene las prácticas desarrolladas durante la materia de **I
 |---|---|---|---|---|
 | 01 | Metodología de Evaluación de la Materia | Revisión de la forma en que se evaluará la materia durante el cuatrimestre. | 05 | Completada ✅ |
 | 02 | [Práctica 02 - Boceto de Arquitectura con Archify](./mobile-platform-architecture.html) | Instalación y configuración de la librería Archify para generar, mediante un prompt en Codex de ChatGPT, un diagrama interactivo de arquitectura para una aplicación móvil. El diagrama representa el flujo de autenticación con Keycloak, la comunicación con una API REST desarrollada con FastAPI, el almacenamiento en PostgreSQL y MongoDB, la integración con servicios de mapas y el entorno de desarrollo con Docker, Docker Compose, Git y GitHub. | 24 | Completada ✅ |
+| 03 | [Práctica 03 - Boceto de Modelo Canvas con Archify](./Practica_3/README.md) | Elaboración de un Business Model Canvas para Spotify mediante un prompt en Archify. Se revisó y mejoró el resultado, y se implementó una aplicación web interactiva para explorar los nueve bloques del modelo, junto con su documentación, evidencias y archivos HTML generados. | 10 | Completada ✅ |
 
 ### Archivos de la práctica
 

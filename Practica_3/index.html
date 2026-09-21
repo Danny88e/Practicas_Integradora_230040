@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Business Model Canvas — Spotify</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+  <main class="app-shell">
+    <header class="hero"><span class="eyebrow">ANÁLISIS · MODELO DE NEGOCIO</span><h1>Business Model Canvas <i>Spotify</i></h1><p>Modelo de negocio de Spotify representado mediante los 9 bloques del Business Model Canvas.</p>
+      <div class="toolbar"><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Buscar en el Canvas…"></label><select id="filter" aria-label="Filtrar bloques"><option value="all">Todos los bloques</option><option value="creacion">Creación de valor</option><option value="clientes">Clientes y canales</option><option value="finanzas">Finanzas</option></select><button id="exploreBtn" class="button primary">Explorar Canvas <span>→</span></button><button id="canvasBtn" class="button">Ver Canvas completo</button></div>
+    </header>
+    <p class="notice">Los contenidos representan un análisis educativo del modelo de negocio; no son declaraciones oficiales de Spotify.</p>
+    <section id="canvasView" class="canvas-view" aria-label="Los nueve bloques del Canvas"><div class="canvas-viewport"><div id="cards" class="canvas-grid"></div></div><p id="empty" class="empty" hidden>No hay bloques que coincidan con la búsqueda.</p></section>
+    <section id="explorerView" class="explorer" hidden aria-live="polite"><div class="explorer-top"><span id="progressText">1 / 9</span><div class="progress"><span id="progressBar"></span></div><button id="closeExplore" class="icon-button" aria-label="Cerrar exploración">×</button></div><div id="explorerContent"></div><nav class="explore-nav"><button id="prev" class="button">← Anterior</button><button id="next" class="button primary">Siguiente →</button></nav></section>
+    <section class="about"><span class="about-icon">◇</span><div><h2>¿Qué es el Business Model Canvas?</h2><p>Es una herramienta visual que ayuda a entender cómo una organización crea, entrega y captura valor a través de nueve elementos conectados.</p></div></section>
+  </main><script src="data.js"></script><script src="app.js"></script>
+</body></html>
