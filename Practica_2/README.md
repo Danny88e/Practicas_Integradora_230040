@@ -69,6 +69,16 @@ La arquitectura distingue tres zonas principales:
 - [Diagrama de arquitectura interactivo](./mobile-platform-architecture.html)
 - [Definición estructurada de la arquitectura](./mobile-platform-architecture.json)
 - [Validación visual del diagrama](./mobile-platform-architecture.visual-check.json)
+- [Abrir el diagrama en GitHub Pages](https://danny88e.github.io/Practicas_Integradora_230040/Practica_2/mobile-platform-architecture.html)
+
+## Evidencia
+
+Las siguientes imágenes muestran la evidencia de la generación y visualización
+del diagrama de arquitectura:
+
+![Evidencia 1](./Evidencia/Evidencia_1.png)
+
+![Evidencia 2](./Evidencia/Evidencia_2.png)
 
 ## Resultado de la práctica
 
