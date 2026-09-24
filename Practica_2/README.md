@@ -69,12 +69,9 @@ La arquitectura distingue tres zonas principales:
 - [Diagrama de arquitectura interactivo](./mobile-platform-architecture.html)
 - [Definición estructurada de la arquitectura](./mobile-platform-architecture.json)
 - [Validación visual del diagrama](./mobile-platform-architecture.visual-check.json)
-- [Abrir el diagrama en GitHub Pages](https://danny88e.github.io/Practicas_Integradora_230040/Practica_2/mobile-platform-architecture.html)
+- [Visualizar el diagrama en el navegador](https://htmlpreview.github.io/?https://github.com/Danny88e/Practicas_Integradora_230040/blob/master/Practica_2/mobile-platform-architecture.html)
+- [Abrir el archivo HTML del diagrama en GitHub](./mobile-platform-architecture.html)
 - [Ver el archivo HTML en GitHub](https://github.com/Danny88e/Practicas_Integradora_230040/blob/master/Practica_2/mobile-platform-architecture.html)
-
-> Para que el enlace de GitHub Pages funcione, se debe activar GitHub Pages en
-> **Settings > Pages**, seleccionando la rama `master` y la carpeta `/ (root)`
-> como fuente de publicación.
 
 ## Evidencia
 
