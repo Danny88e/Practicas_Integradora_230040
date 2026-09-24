@@ -21,13 +21,13 @@ Este repositorio contiene las prácticas desarrolladas durante la materia de **I
 | # | Nombre de la práctica | Descripción | Firmas | Estatus |
 |---|---|---|---|---|
 | 01 | Metodología de Evaluación de la Materia | Revisión de la forma en que se evaluará la materia durante el cuatrimestre. | 05 | Completada ✅ |
-| 02 | [Práctica 02 - Boceto de Arquitectura con Archify](./mobile-platform-architecture.html) | Instalación y configuración de la librería Archify para generar, mediante un prompt en Codex de ChatGPT, un diagrama interactivo de arquitectura para una aplicación móvil. El diagrama representa el flujo de autenticación con Keycloak, la comunicación con una API REST desarrollada con FastAPI, el almacenamiento en PostgreSQL y MongoDB, la integración con servicios de mapas y el entorno de desarrollo con Docker, Docker Compose, Git y GitHub. | 24 | Completada ✅ |
+| 02 | [Práctica 02 - Boceto de Arquitectura con Archify](https://github.com/Danny88e/Practicas_Integradora_230040/tree/Practica_02/Practica_2) | Instalación y configuración de la librería Archify para generar, mediante un prompt en Codex de ChatGPT, un diagrama interactivo de arquitectura para una aplicación móvil. El diagrama representa el flujo de autenticación con Keycloak, la comunicación con una API REST desarrollada con FastAPI, el almacenamiento en PostgreSQL y MongoDB, la integración con servicios de mapas y el entorno de desarrollo con Docker, Docker Compose, Git y GitHub. | 24 | Completada ✅ |
+| 03 | [Práctica 03 - Boceto de Modelo Canvas con Archify](https://github.com/Danny88e/Practicas_Integradora_230040/tree/Practica_03/Practica_3) | Elaboración de un Business Model Canvas para Spotify mediante un prompt en Archify. Se revisó y mejoró el resultado, y se implementó una aplicación web interactiva para explorar los nueve bloques del modelo, junto con su documentación, evidencias y archivos HTML generados. | 10 | Completada ✅ |
 
 ### Archivos de la práctica
 
-- [Diagrama de arquitectura interactivo](./mobile-platform-architecture.html)
-- [Definición de la arquitectura](./mobile-platform-architecture.json)
-- [Validación visual](./mobile-platform-architecture.visual-check.json)
+- **Práctica 02:** [README de la rama](https://github.com/Danny88e/Practicas_Integradora_230040/blob/Practica_02/Practica_2/README.md) · [Diagrama en GitHub Pages](https://danny88e.github.io/Practicas_Integradora_230040/Practica_2/mobile-platform-architecture.html)
+- **Práctica 03:** [README de la rama](https://github.com/Danny88e/Practicas_Integradora_230040/blob/Practica_03/Practica_3/README.md) · [Diagrama en GitHub Pages](https://danny88e.github.io/Practicas_Integradora_230040/Practica_3/spotify-canvas-architecture.html)
 
 ## Autor
 
