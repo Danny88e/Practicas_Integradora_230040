@@ -70,7 +70,7 @@ El modelo de Spotify contiene los nueve bloques principales:
 - [Código de interacción](./app.js)
 - [Datos de los bloques](./data.js)
 - [Estilos de la aplicación](./styles.css)
-- [Visualizar la aplicación Canvas en GitHub Pages](https://danny88e.github.io/Practicas_Integradora_230040/Practica_3/index.html)
+- [Visualizar la aplicación Canvas en GitHub Pages✅💯](https://danny88e.github.io/Practicas_Integradora_230040/Practica_3/index.html)
 - [Abrir el archivo HTML del modelo Canvas en GitHub](./spotify-canvas-architecture.html)
 - [Abrir la aplicación interactiva en GitHub](./index.html)
 - [Ver los archivos HTML en GitHub](https://github.com/Danny88e/Practicas_Integradora_230040/tree/master/Practica_3)
