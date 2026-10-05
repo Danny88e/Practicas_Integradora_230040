@@ -62,24 +62,26 @@
       outline-offset: 4px;
     }
     .page { width: min(1160px, calc(100% - 36px)); margin: 0 auto; padding: 28px 0 44px; }
-    .topbar { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; }
+    .topbar { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; border: 1px solid var(--green); border-radius: var(--radius); padding: 18px 20px; background: var(--green); color: #07140b; box-shadow: var(--shadow); }
     .identity { min-width: 0; }
-    .eyebrow { margin: 0 0 9px; color: var(--muted); font-size: 10px; font-weight: 800; letter-spacing: .19em; text-transform: uppercase; }
+    .eyebrow { margin: 0 0 9px; color: #143820; font-size: 10px; font-weight: 800; letter-spacing: .19em; text-transform: uppercase; }
     .title-row { display: flex; align-items: center; gap: 12px; }
-    .brand-mark { width: 36px; height: 36px; flex: 0 0 auto; display: grid; place-items: center; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 5px var(--green-wash); }
+    .brand-mark { width: 36px; height: 36px; flex: 0 0 auto; display: grid; place-items: center; border-radius: 50%; background: #102b19; box-shadow: 0 0 0 5px rgb(7 20 11 / 12%); }
     .brand-mark svg { display: block; width: 23px; height: 23px; }
     h1 { margin: 0; font-size: clamp(25px, 4vw, 34px); line-height: 1.1; letter-spacing: -.035em; }
-    .byline { margin: 10px 0 0 48px; color: var(--muted); font-size: 12px; }
-    .byline strong { color: var(--text); font-weight: 700; }
-    .intro { max-width: 730px; margin: 15px 0 0 48px; color: var(--muted); font-size: 12px; }
-    .academic-note { display: inline-flex; align-items: center; gap: 8px; margin: 12px 0 0 48px; border-left: 3px solid var(--green); padding: 5px 0 5px 10px; color: var(--muted); font-size: 11px; }
-    .academic-note b { color: var(--green-strong); }
+    .byline { margin: 10px 0 0 48px; color: #153b23; font-size: 12px; }
+    .byline strong { color: #07140b; font-weight: 800; }
+    .intro { max-width: 730px; margin: 15px 0 0 48px; color: #153b23; font-size: 12px; }
+    .academic-note { display: inline-flex; align-items: center; gap: 8px; margin: 12px 0 0 48px; border-left: 3px solid #102b19; padding: 5px 0 5px 10px; color: #153b23; font-size: 11px; }
+    .academic-note b { color: #07140b; }
     .toolbar { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
     .control, .role-button, .branch-button, .close-button {
       min-height: 36px; border: 1px solid var(--line); border-radius: 10px; padding: 0 12px;
       background: var(--surface); color: var(--text); cursor: pointer; user-select: none;
       transition: border-color .16s ease, background .16s ease, color .16s ease, transform .16s ease;
     }
+    .topbar .control { border-color: rgb(7 20 11 / 45%); background: #102b19; color: #ffffff; }
+    .topbar .control:hover { border-color: #ffffff; background: #071c0e; }
     .control:hover, .role-button:hover, .close-button:hover { border-color: var(--green); }
     .control:active, .role-button:active, .branch-button:active { transform: translateY(1px); }
     .control.primary, .role-button[aria-pressed="true"] { border-color: var(--green); background: var(--green-wash); color: var(--green-strong); }
@@ -137,7 +139,7 @@
     .status-pills { display: flex; gap: 3px; }
     .status-pills i { display: block; width: 8px; height: 4px; border-radius: 4px; background: var(--soft); }
     .screen-title { min-height: 21px; margin: 0 0 7px; overflow: hidden; color: var(--text); font-size: 10px; line-height: 1.15; font-weight: 850; }
-    .widget-stack { display: flex; flex: 1; flex-direction: column; gap: 5px; overflow: hidden; }
+    .widget-stack { display: flex; flex: 1; flex-direction: column; gap: 5px; overflow: visible; }
     .widget-label { margin: 0 0 3px; color: var(--muted); font-size: 7px; line-height: 1.15; }
     .widget-field { height: 18px; display: flex; align-items: center; border: 1px solid var(--line); border-radius: 4px; padding: 0 5px; color: var(--soft); font-size: 7px; }
     .widget-action { min-height: 17px; display: flex; align-items: center; justify-content: center; border-radius: 5px; padding: 2px 4px; background: var(--green); color: #07140b; font-size: 7px; font-weight: 900; text-align: center; }
@@ -162,6 +164,23 @@
     .widget-bars { height: 43px; display: flex; align-items: end; justify-content: space-around; gap: 3px; border-bottom: 1px solid var(--line); padding: 4px 4px 0; }
     .widget-bars i { width: 10%; min-height: 7px; border-radius: 3px 3px 0 0; background: var(--green); opacity: .88; }
     .widget-avatar { width: 42px; height: 42px; align-self: center; border-radius: 50%; background: linear-gradient(135deg, #555, #292929); }
+    .widget-tile, .widget-field, .widget-action, .widget-search, .widget-chip, .widget-stat, .widget-artwork, .widget-avatar, .widget-song, .widget-bars {
+      position: relative;
+      transform-origin: center;
+      transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
+    }
+    .alternate-card { cursor: pointer; color: var(--text); font: inherit; text-align: left; }
+    .alternate-card:hover, .alternate-card:focus-visible { z-index: 1; border-color: var(--green); background: var(--green-wash); box-shadow: 0 8px 22px rgb(0 0 0 / 20%); transform: translateY(-2px) scale(1.025); }
+    @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+      .phone-screen .widget-tile:hover, .phone-screen .widget-field:hover, .phone-screen .widget-action:hover,
+      .phone-screen .widget-search:hover, .phone-screen .widget-chip:hover, .phone-screen .widget-stat:hover,
+      .phone-screen .widget-artwork:hover, .phone-screen .widget-avatar:hover, .phone-screen .widget-song:hover,
+      .phone-screen .widget-bars:hover {
+        z-index: 3;
+        box-shadow: 0 3px 11px rgb(0 0 0 / 32%);
+        transform: scale(1.08);
+      }
+    }
     .screen-caption { min-height: 25px; margin: 9px 0 0; color: var(--muted); font-size: 9px; line-height: 1.2; text-align: center; }
     .step-link { width: 36px; flex: 0 0 36px; padding-top: 84px; color: var(--green); text-align: center; }
     .step-link .step-action { display: block; width: 53px; margin-left: -8px; color: var(--muted); font-size: 7px; line-height: 1.15; }
@@ -177,8 +196,8 @@
     .alternate-grid { display: grid; grid-template-columns: repeat(3, minmax(180px, 1fr)); gap: 10px; }
     .alternate-card { min-height: 122px; border: 1px dashed var(--line); border-radius: 13px; padding: 12px; background: var(--surface); }
     .alternate-card .alt-icon { width: 25px; height: 25px; display: grid; place-items: center; margin-bottom: 8px; border-radius: 8px; background: var(--tile); color: var(--green-strong); font-weight: 900; }
-    .alternate-card h3 { margin: 0 0 4px; font-size: 11px; }
-    .alternate-card p { margin: 0; color: var(--muted); font-size: 9px; }
+    .alternate-title { display: block; margin: 0 0 4px; font-size: 11px; font-weight: 800; }
+    .alternate-description { display: block; margin: 0; color: var(--muted); font-size: 9px; }
     .notes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 17px; }
     .note-card { border: 1px solid var(--line); border-radius: 13px; padding: 12px 14px; background: var(--surface); }
     .note-card h2 { margin: 0 0 5px; color: var(--green-strong); font-size: 11px; }
@@ -203,6 +222,7 @@
     @media (max-width: 780px) {
       .page { width: min(100% - 24px, 680px); padding-top: 18px; }
       .topbar { display: block; }
+      .topbar .toolbar { margin: 14px 0 0 48px; }
       .toolbar { justify-content: flex-start; margin: 14px 0 0 48px; }
       .shared-entry { grid-template-columns: 1fr; gap: 10px; padding: 14px; }
       .shared-screen { order: 2; }
@@ -216,7 +236,8 @@
       .page { width: calc(100% - 20px); }
       .title-row { align-items: flex-start; }
       h1 { font-size: 25px; }
-      .byline, .intro, .academic-note, .role-picker, .instruction, .toolbar { margin-left: 0; }
+      .topbar { padding: 15px 13px; }
+      .byline, .intro, .academic-note, .role-picker, .instruction, .toolbar, .topbar .toolbar { margin-left: 0; }
       .brand-mark { margin-top: 1px; }
       .toolbar { gap: 6px; }
       .control { min-height: 34px; padding: 0 9px; font-size: 11px; }
@@ -314,9 +335,9 @@
     <section class="alternates" aria-labelledby="alternatesTitle">
       <h2 id="alternatesTitle">Estados alternos · fuera del flujo principal</h2>
       <div class="alternate-grid">
-        <article class="alternate-card"><span class="alt-icon" aria-hidden="true">⌁</span><h3>Sin conexión</h3><p>El aviso y las opciones disponibles dependen del contenido y del estado de la cuenta.</p></article>
-        <article class="alternate-card"><span class="alt-icon" aria-hidden="true">⌕</span><h3>Búsqueda sin resultados</h3><p>Invita a cambiar o corregir los términos de búsqueda.</p></article>
-        <article class="alternate-card"><span class="alt-icon" aria-hidden="true">◇</span><h3>Contenido no disponible</h3><p>El álbum, la pista o el lanzamiento no puede abrirse en ese momento.</p></article>
+        <button class="alternate-card" type="button" data-alternate="offline" aria-label="Ver información del estado Sin conexión"><span class="alt-icon" aria-hidden="true">⌁</span><span class="alternate-title">Sin conexión</span><span class="alternate-description">El aviso y las opciones disponibles dependen del contenido y del estado de la cuenta.</span></button>
+        <button class="alternate-card" type="button" data-alternate="empty-search" aria-label="Ver información del estado Búsqueda sin resultados"><span class="alt-icon" aria-hidden="true">⌕</span><span class="alternate-title">Búsqueda sin resultados</span><span class="alternate-description">Invita a cambiar o corregir los términos de búsqueda.</span></button>
+        <button class="alternate-card" type="button" data-alternate="unavailable" aria-label="Ver información del estado Contenido no disponible"><span class="alt-icon" aria-hidden="true">◇</span><span class="alternate-title">Contenido no disponible</span><span class="alternate-description">El álbum, la pista o el lanzamiento no puede abrirse en ese momento.</span></button>
       </div>
     </section>
 
@@ -402,20 +423,49 @@
 
     const dialog = document.getElementById("screenDialog");
     let lastFocused = null;
+    function showDetail({ kicker, title, purpose, elements, next }, trigger) {
+      lastFocused = trigger;
+      document.getElementById("dialogKicker").textContent = kicker;
+      document.getElementById("dialogTitle").textContent = title;
+      document.getElementById("dialogPurpose").textContent = purpose;
+      document.getElementById("dialogElements").innerHTML = elements.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+      document.getElementById("dialogNext").textContent = next;
+      dialog.showModal();
+      document.getElementById("closeDialog").focus();
+    }
+    const alternateDetails = {
+      offline: {
+        kicker: "Estado alterno · Oyente",
+        title: "Sin conexión",
+        purpose: "La aplicación detecta que no hay conexión y comunica qué opciones de escucha siguen disponibles.",
+        elements: ["Aviso claro del estado de conexión", "Acceso a contenido disponible sin conexión, si aplica a la cuenta", "Opción para reintentar cuando vuelva la red"],
+        next: "Acción posible: reintentar la conexión o continuar con contenido disponible."
+      },
+      "empty-search": {
+        kicker: "Estado alterno · Buscar",
+        title: "Búsqueda sin resultados",
+        purpose: "La consulta no encuentra coincidencias en el catálogo.",
+        elements: ["Mensaje de que no hay resultados", "Consulta ingresada visible para revisarla", "Sugerencia para probar otras palabras"],
+        next: "Acción posible: corregir o cambiar los términos de búsqueda."
+      },
+      unavailable: {
+        kicker: "Estado alterno · Catálogo",
+        title: "Contenido no disponible",
+        purpose: "El elemento seleccionado no está disponible para reproducirse o consultarse en ese momento.",
+        elements: ["Aviso contextual sobre el elemento", "Información del contenido que se intentó abrir", "Alternativa para volver a resultados o explorar otra opción"],
+        next: "Acción posible: regresar al catálogo y elegir otro contenido."
+      }
+    };
     document.querySelectorAll(".phone-button").forEach((button) => {
       button.addEventListener("click", () => {
         const role = button.dataset.screenRole;
         const index = Number(button.dataset.screenIndex);
         const screen = (role === "listener" ? listenerScreens : artistScreens)[index];
-        lastFocused = button;
-        document.getElementById("dialogKicker").textContent = `${role === "listener" ? "Oyente" : "Artista"} · pantalla ${String(index + 1).padStart(2, "0")}`;
-        document.getElementById("dialogTitle").textContent = screen.title;
-        document.getElementById("dialogPurpose").textContent = screen.purpose;
-        document.getElementById("dialogElements").innerHTML = screen.elements.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
-        document.getElementById("dialogNext").textContent = screen.next;
-        dialog.showModal();
-        document.getElementById("closeDialog").focus();
+        showDetail({ ...screen, kicker: `${role === "listener" ? "Oyente" : "Artista"} · pantalla ${String(index + 1).padStart(2, "0")}` }, button);
       });
+    });
+    document.querySelectorAll("[data-alternate]").forEach((button) => {
+      button.addEventListener("click", () => showDetail(alternateDetails[button.dataset.alternate], button));
     });
     function closeDialog() { dialog.close(); if (lastFocused) lastFocused.focus(); }
     document.getElementById("closeDialog").addEventListener("click", closeDialog);

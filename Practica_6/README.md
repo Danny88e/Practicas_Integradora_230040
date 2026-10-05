@@ -6,11 +6,8 @@
 
 ### Entregables
 
-- [Abrir el diagrama interactivo (HTML)](./spotify-mobile-journeys.html)
-- [Abrir en GitHub Pages](https://danny88e.github.io/Practicas_Integradora_230040/Practica_6/spotify-mobile-journeys.html) — estará disponible después de fusionar los cambios a `main` y de que GitHub Pages publique la actualización.
-- [Modelo Canvas de referencia · Práctica 3](../Practica_3/README.md)
+- [Abrir en GitHub Pages](https://danny88e.github.io/Practicas_Integradora_230040/Practica_6/spotify-mobile-journeys.html) ✅💯
 
-> El enlace de Pages queda preparado, pero todavía no se ha realizado ninguna fusión. Si GitHub Pages no publica desde la rama `main` o la URL del sitio está configurada de otra forma, habrá que ajustar la ruta después de revisar esa configuración.
 
 ### Objetivo de la práctica
 
@@ -45,6 +42,27 @@ El selector de experiencia separa ambos recorridos y es una convención académi
 ### Alcance y atribución
 
 La selección común y los sketches son propuestas para esta actividad, basadas en funciones públicas generales. El diagrama no intenta reproducir exactamente las interfaces de Spotify y no está afiliado con Spotify.
+
+## Evidencia
+
+Las capturas documentan el diagrama en escritorio, ambos recorridos, los estados alternos y el tema claro.
+
+### 1. Recorrido del oyente
+
+![Evidencia 1: encabezado y recorrido de pantallas del oyente](./Evidencia/1.png)
+
+### 2. Recorrido del artista y estados alternos
+
+![Evidencia 2: pantallas del artista y estados alternos](./Evidencia/2.png)
+
+### 3. Tema claro
+
+![Evidencia 3: diagrama en tema claro](./Evidencia/3.png)
+
+### 4. Carril del artista en tema claro
+
+![Evidencia 4: recorrido del artista y estados alternos en tema claro](./Evidencia/4.png)
+
 
 ## Autor
 
