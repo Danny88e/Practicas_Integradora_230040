@@ -1,36 +1,51 @@
-## Práctica 6 · Secuencia de pantallas móviles de Spotify
+## Práctica 06: Diagrama de Secuencia de Pantallas (Sketches) de Aplicación Móvil con 2 Roles
 
-**Luis Daniel Suarez Escamilla · 10A IDGS**  
-Modalidad: individual · Plataforma: Spotify
+**Estudiante:** Luis Daniel Suarez Escamilla · 10A IDGS  
+**Modalidad:** Individual · **Plataforma:** Spotify  
+**Firmas requeridas:** 20 · **Fecha de entrega indicada:** viernes 10 de octubre de 2026
 
-### Entrega única
+### Entregables
 
-- [Abrir el diagrama interactivo de sketches](./spotify-mobile-journeys.html)
-- Modelo de referencia: [Práctica 3 · Canvas de Spotify](../Practica_3/README.md)
+- [Abrir el diagrama interactivo (HTML)](./spotify-mobile-journeys.html)
+- [Abrir en GitHub Pages](https://danny88e.github.io/Practicas_Integradora_230040/Practica_6/spotify-mobile-journeys.html) — estará disponible después de fusionar los cambios a `main` y de que GitHub Pages publique la actualización.
+- [Modelo Canvas de referencia · Práctica 3](../Practica_3/README.md)
 
-El diagrama sigue la composición de la referencia: encabezado compacto, selector de rol, un carril de pantallas para **Oyente**, un segundo carril para **Artista**, numeración y flechas de acción entre bocetos, una relación conceptual entre carriles y estados alternos fuera del flujo. Cada teléfono contiene un sketch distinto; al seleccionarlo se abre su propósito, elementos principales y acción siguiente.
+> El enlace de Pages queda preparado, pero todavía no se ha realizado ninguna fusión. Si GitHub Pages no publica desde la rama `main` o la URL del sitio está configurada de otra forma, habrá que ajustar la ruta después de revisar esa configuración.
 
-La paleta es oscura —negro carbón y grises— con el verde Spotify **#1DB954** como acento predominante para acciones, pasos y señalización. Incluye alternancia de tema, navegación al carril del rol seleccionado, foco accesible y respeto de `prefers-reduced-motion`. El logotipo circular de ecualizador es original; no se utilizan capturas, logotipos ni pantallas oficiales.
+### Objetivo de la práctica
 
-### Pantallas del flujo principal
+Representar la experiencia de una aplicación móvil mediante una secuencia de pantallas para al menos dos roles y un mínimo de quince pantallas compartidas y específicas. El resultado es un diagrama interactivo de baja fidelidad que muestra acciones, transiciones y estados alternos.
 
-Hay **15 pantallas**: un selector de experiencia propuesto, siete pantallas para Oyente y siete para Artista.
+### Estructura del diagrama
 
-| Carril | Secuencia |
+El artefacto es un solo HTML autocontenido. Presenta dos carriles horizontales, con sketches dentro de marcos de teléfono, numeración y flechas con acciones entre pantallas:
+
+| Carril | Pantallas en orden |
 | --- | --- |
-| Compartida (supuesto académico) | Selector de experiencia → Oyente / Artista |
-| Oyente | Iniciar sesión → Inicio → Buscar → Resultados → Playlist/álbum → Reproduciendo → Tu biblioteca |
-| Artista | Acceso → Resumen del artista → Audiencia → Rendimiento de canción → Música y lanzamientos → Detalle de lanzamiento → Perfil del artista |
+| Oyente | Iniciar sesión → Inicio → Buscar → Resultados → Playlist / álbum → Reproduciendo → Tu biblioteca |
+| Artista | Acceso de artista → Resumen del artista → Audiencia → Rendimiento de canción → Música y lanzamientos → Detalle de lanzamiento → Perfil del artista |
 
-Fuera del recorrido principal aparecen tres estados: **sin conexión**, **búsqueda sin resultados** y **contenido no disponible**. La conexión entre reproducciones y métricas es solo conceptual y agregada; no representa datos personales ni una actualización en tiempo real. La entrada compartida se marca como supuesto porque Spotify y Spotify for Artists son contextos distintos.
+El selector de experiencia separa ambos recorridos y es una convención académica, no una afirmación de que Spotify y Spotify for Artists compartan un único inicio de sesión. Se incluyen, fuera del flujo principal, los estados **Sin conexión**, **Búsqueda sin resultados** y **Contenido no disponible**. Una relación entre carriles explica de manera conceptual cómo las reproducciones agregadas se vinculan con las estadísticas de audiencia, sin representar seguimiento de datos individuales ni actualización en tiempo real.
+
+### Diseño e interacción
+
+- Paleta oscura de negro carbón y grises con verde **#1DB954** como acento principal.
+- Sketches originales y distintos por pantalla; sin capturas, logotipos ni diseños oficiales.
+- Selección de rol con navegación al carril correspondiente, realce y foco accesible.
+- Detalle de pantalla con propósito, elementos principales y acción siguiente.
+- Tema claro/oscuro, controles de teclado, región de anuncios accesibles y respeto de `prefers-reduced-motion`.
+- Diseño adaptable: desplazamiento horizontal por carril en pantallas estrechas.
 
 ### Evolución de los prompts
 
-1. **Estructura:** solicita dos carriles horizontales, sketches de teléfonos, quince pantallas, pasos numerados, acciones entre pantallas y estados alternos.
-2. **Identidad:** fija fondo carbón, superficies grises y el verde **#1DB954** como acento fuerte; solicita símbolo original, texto legible y aviso académico.
-3. **Interacción:** pide detalle por pantalla, selección de rol con desplazamiento al carril, tema claro/oscuro, reinicio de selección, navegación por teclado y soporte para movimiento reducido.
+1. **Estructura y cobertura:** dos carriles por rol, al menos quince pantallas, sketches móviles, acciones numeradas y estados alternos.
+2. **Identidad visual:** fondo oscuro, grises y acento verde Spotify **#1DB954**, con símbolo musical original y aviso académico.
+3. **Interacción y accesibilidad:** detalle al seleccionar una pantalla, navegación hacia cada rol, alternancia de tema, foco visible, teclado y movimiento reducido.
 
-### Alcance
+### Alcance y atribución
 
-Es un único HTML autocontenido con bocetos conceptuales hechos para la práctica. Se basa en funciones públicas generales; no pretende reproducir exactamente la aplicación ni afirma afiliación con Spotify.
+La selección común y los sketches son propuestas para esta actividad, basadas en funciones públicas generales. El diagrama no intenta reproducir exactamente las interfaces de Spotify y no está afiliado con Spotify.
 
+## Autor
+
+**Luis Daniel Suarez Escamilla** / [@Danny88e](https://github.com/Danny88e)
