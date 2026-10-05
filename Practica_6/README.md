@@ -1,4 +1,4 @@
-## Práctica 06: Diagrama de Secuencia de Pantallas (Sketches) de Aplicación Móvil con 2 Roles
+# Práctica 06: Diagrama de Secuencia de Pantallas (Sketches) de Aplicación Móvil con 2 Roles
 
 **Estudiante:** Luis Daniel Suarez Escamilla · 10A IDGS  
 **Modalidad:** Individual · **Plataforma:** Spotify  
@@ -35,9 +35,19 @@ El selector de experiencia separa ambos recorridos y es una convención académi
 
 ### Evolución de los prompts
 
-1. **Estructura y cobertura:** dos carriles por rol, al menos quince pantallas, sketches móviles, acciones numeradas y estados alternos.
-2. **Identidad visual:** fondo oscuro, grises y acento verde Spotify **#1DB954**, con símbolo musical original y aviso académico.
-3. **Interacción y accesibilidad:** detalle al seleccionar una pantalla, navegación hacia cada rol, alternancia de tema, foco visible, teclado y movimiento reducido.
+Los siguientes ejemplos resumen las instrucciones usadas para definir y mejorar el diagrama:
+
+#### Prompt v1 · Estructura y recorridos
+
+> Diseña un diagrama de secuencia de pantallas móviles para Spotify con dos roles: Oyente y Artista. Organiza la experiencia en dos carriles horizontales y usa bocetos originales de baja fidelidad dentro de marcos de teléfono. Incluye al menos 15 pantallas en total, compartidas y específicas de cada rol. Para Oyente muestra el recorrido Iniciar sesión → Inicio → Buscar → Resultados → Playlist o álbum → Reproduciendo → Tu biblioteca. Para Artista muestra Acceso → Resumen → Audiencia → Rendimiento de canción → Música y lanzamientos → Detalle de lanzamiento → Perfil del artista. Numera los pasos y etiqueta cada transición con una acción breve. Agrega fuera del flujo principal los estados Sin conexión, Búsqueda sin resultados y Contenido no disponible. Incluye una relación conceptual entre reproducciones agregadas y estadísticas de audiencia. No inventes funciones privadas ni presentes los bocetos como pantallas oficiales; identifica los supuestos académicos.
+
+#### Prompt v2 · Identidad visual
+
+> Mantén los dos recorridos y el contenido definidos. Aplica un tema oscuro de negro carbón y grises, usando el verde Spotify #1DB954 como acento principal para botones, numeración y flechas. Conserva buen contraste y legibilidad en móvil y escritorio. Crea un símbolo musical geométrico original; no copies el logotipo, la tipografía, capturas ni pantallas de Spotify. Incluye el nombre del estudiante, grupo y una nota de que es un ejercicio académico no afiliado a Spotify.
+
+#### Prompt v3 · Interacciones y accesibilidad
+
+> Conserva el mismo diseño, número de pantallas y orden de los recorridos. Haz que las pantallas sean seleccionables y muestren un panel con propósito, elementos del boceto y acción siguiente. Al seleccionar Oyente o Artista, desplázate al carril correspondiente, resáltalo brevemente, atenúa el otro y mueve el foco al encabezado; permite restablecer la selección sin desplazar la vista. Añade alternancia de tema claro/oscuro. En los estados alternos agrega cursor interactivo, realce al pasar el mouse y un panel informativo al hacer clic. Mantén navegación por teclado, foco visible, anuncios accesibles y respeto de prefers-reduced-motion.
 
 ### Alcance y atribución
 
